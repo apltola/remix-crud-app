@@ -38,7 +38,7 @@ export default function JokesRoute() {
         <div className="container">
           <div className="jokes-list">
             <Link to=".">Get a random joke</Link>
-            <p>More jokes to check out:</p>
+            <p>More jokes:</p>
             <ul>
               {jokeListItems.map(({ id, name }) => (
                 <li key={id}>
