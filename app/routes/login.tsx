@@ -78,6 +78,7 @@ export const action = async ({ request }: ActionArgs) => {
       }
       return createUserSession(user.id, redirectTo);
     }
+
     case 'register': {
       const userExists = await db.user.findFirst({
         where: { username },
@@ -97,6 +98,7 @@ export const action = async ({ request }: ActionArgs) => {
         formError: 'Not implemented',
       });
     }
+
     default: {
       return badRequest({
         fieldErrors: null,
